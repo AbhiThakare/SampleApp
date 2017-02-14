@@ -1,0 +1,1 @@
+angular.module('AbhiSampleProject', ['ui.bootstrap', 'ui.router', 'ngCookies']);

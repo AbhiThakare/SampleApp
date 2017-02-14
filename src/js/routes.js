@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Route configuration for the RDash module.
+ * Route configuration for the SampleApp module.
  */
 angular.module('AbhiSampleProject').config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {

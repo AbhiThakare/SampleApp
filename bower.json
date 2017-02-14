@@ -1,17 +1,15 @@
 {
-    "name": "rdash-angular",
+    "name": "sample-app",
     "version": "0.0.1",
     "description": "An AngularJS implementation of the responsive dashboard",
-    "homepage": "https://github.com/Ehesp/Responsive-Dashboard",
+    "homepage": "https://github.com/AbhiThakare/SampleApp",
     "authors": [
-        "Elliot Hesp <elliot.hesp@gmail.com>"
+        "Abhinav Thakare <thakareabhinav@gmail.com>"
     ],
     "contributors": [
-        "Ricardo Pascua Jr <rdpascua@outlook.com>",
-        "Leonel Samayoa <leonel.e.samayoa@gmail.com>"
+        "Abhinav Thakare <thakareabhinav@gmail.com>"
     ],
     "main": "index.html",
-    "license": "MIT",
     "ignore": [
         "**/.*",
         "node_modules",
@@ -30,6 +28,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/rdash/rdash-angular"
+        "url": "https://github.com/AbhiThakare/SampleApp"
     }
 }

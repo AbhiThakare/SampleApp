@@ -27,3 +27,5 @@ If you'd like to include any additional modules/packages not included with sampl
 ## Credits
 * [Abhinav Thakare](https://github.com/AbhiThakare)
 
+Copyright (c) [2017] [Abhinav Thakare]
+

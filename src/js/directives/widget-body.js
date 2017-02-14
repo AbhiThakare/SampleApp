@@ -1,10 +1,7 @@
 /**
  * Widget Body Directive
  */
-
-angular
-    .module('AbhiSampleProject')
-    .directive('rdWidgetBody', rdWidgetBody);
+angular.module('AbhiSampleProject').directive('rdWidgetBody', rdWidgetBody);
 
 function rdWidgetBody() {
     var directive = {

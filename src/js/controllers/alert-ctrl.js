@@ -1,10 +1,7 @@
 /**
  * Alerts Controller
  */
-
-angular
-    .module('AbhiSampleProject')
-    .controller('AlertsCtrl', ['$scope', AlertsCtrl]);
+angular.module('AbhiSampleProject').controller('AlertsCtrl', ['$scope', AlertsCtrl]);
 
 function AlertsCtrl($scope) {
     $scope.alerts = [{
@@ -14,13 +11,11 @@ function AlertsCtrl($scope) {
         type: 'danger',
         msg: 'Found a bug? Create an issue with as many details as you can.'
     }];
-
     $scope.addAlert = function() {
         $scope.alerts.push({
             msg: 'Another alert!'
         });
     };
-
     $scope.closeAlert = function(index) {
         $scope.alerts.splice(index, 1);
     };

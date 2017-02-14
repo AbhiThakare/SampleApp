@@ -1,10 +1,7 @@
 /**
  * Widget Header Directive
  */
-
-angular
-    .module('AbhiSampleProject')
-    .directive('rdWidgetHeader', rdWidgetTitle);
+angular.module('AbhiSampleProject').directive('rdWidgetHeader', rdWidgetTitle);
 
 function rdWidgetTitle() {
     var directive = {

@@ -2,10 +2,7 @@
  * Loading Directive
  * @see http://tobiasahlin.com/spinkit/
  */
-
-angular
-    .module('AbhiSampleProject')
-    .directive('rdLoading', rdLoading);
+angular.module('AbhiSampleProject').directive('rdLoading', rdLoading);
 
 function rdLoading() {
     var directive = {

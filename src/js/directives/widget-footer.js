@@ -1,10 +1,7 @@
 /**
  * Widget Footer Directive
  */
-
-angular
-    .module('AbhiSampleProject')
-    .directive('rdWidgetFooter', rdWidgetFooter);
+angular.module('AbhiSampleProject').directive('rdWidgetFooter', rdWidgetFooter);
 
 function rdWidgetFooter() {
     var directive = {

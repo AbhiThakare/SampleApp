@@ -9,7 +9,8 @@ angular.module('AbhiSampleProject').config(['$stateProvider', '$urlRouterProvide
         // Application routes
         $stateProvider.state('index', {
             url: '/',
-            templateUrl: 'templates/dashboard.html'
+            templateUrl: 'templates/dashboard.html',
+            controller: 'AlertsCtrl'
         }).state('tables', {
             url: '/tables',
             templateUrl: 'templates/tables.html',

@@ -1,3 +1,4 @@
+'use strict';
 angular.module('AbhiSampleProject').service('sampleService', function($q, $http) {
     var fetchTansuctionsDetails = function() {
         return $q(function(resolve, reject) {

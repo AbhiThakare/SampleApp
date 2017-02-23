@@ -1,13 +1,6 @@
-/**
- * Master Controller
- */
-angular.module('AbhiSampleProject').controller('MasterCtrl', ['$scope', '$cookieStore', MasterCtrl]);
-
-function MasterCtrl($scope, $cookieStore) {
-    /**
-     * Sidebar Toggle & Cookie Control
-     */
-    var mobileView = 992;
+'use strict';
+angular.module('AbhiSampleProject').controller('MasterCtrl', function($scope, $cookieStore) {
+	var mobileView = 992;
     $scope.getWidth = function() {
         return window.innerWidth;
     };
@@ -29,4 +22,4 @@ function MasterCtrl($scope, $cookieStore) {
     window.onresize = function() {
         $scope.$apply();
     };
-}
+})

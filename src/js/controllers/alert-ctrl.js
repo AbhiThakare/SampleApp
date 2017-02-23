@@ -1,10 +1,6 @@
-/**
- * Alerts Controller
- */
-angular.module('AbhiSampleProject').controller('AlertsCtrl', ['$scope', AlertsCtrl]);
-
-function AlertsCtrl($scope) {
-    $scope.alerts = [{
+'use strict';
+angular.module('AbhiSampleProject').controller('AlertsCtrl', function($scope) {
+	$scope.alerts = [{
         type: 'success',
         msg: 'Thanks for visiting! Feel free to create pull requests to improve the dashboard!'
     }, {
@@ -19,4 +15,4 @@ function AlertsCtrl($scope) {
     $scope.closeAlert = function(index) {
         $scope.alerts.splice(index, 1);
     };
-}
+})

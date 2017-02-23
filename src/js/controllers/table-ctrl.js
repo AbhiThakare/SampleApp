@@ -1,10 +1,10 @@
-/**
- * Alerts Controller
- */
-angular.module('AbhiSampleProject').controller('TableCtrl', ['$scope', TableCtrl]);
-
-function TableCtrl($scope) {
-    $scope.hitAlert = function() {
-        alert('hi Abhinav');
-    };
-}
+'use strict';
+angular.module('AbhiSampleProject').controller('TableCtrl', function($scope, sampleService) {
+	 $scope.hitAlert = function() {
+	    	sampleService.fetchTansuctionsDetails().then(function(transDetails) {
+	           alert(true);
+	        }, function(err) {
+	        	alert(err);
+	        });
+	    };  
+})

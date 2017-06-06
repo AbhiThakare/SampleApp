@@ -8,7 +8,9 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
+    inject = require('gulp-inject'),
     minifyHTML = require('gulp-htmlmin');
+
 
 var paths = {
     scripts: 'src/js/**/*.*',
@@ -18,6 +20,19 @@ var paths = {
     index: 'src/index.html',
     bower_fonts: 'src/components/**/*.{ttf,woff,eof,svg}',
 };
+
+
+/**
+ * add custom lib to index.html
+ */
+gulp.task('index', function () {
+	  var target = gulp.src('src/index.html');
+	  // It's not necessary to read the files (will speed up things), we're only after their paths: 
+	  var sources = gulp.src(['dist/**/*.js', 'dist/**/*.css'], {read: false});
+	 
+	  return target.pipe(inject(sources))
+	    .pipe(gulp.dest('./src'));
+});
 
 /**
  * Handle bower components from index
@@ -64,6 +79,8 @@ gulp.task('custom-js', function() {
 gulp.task('custom-less', function() {
     return gulp.src(paths.styles)
         .pipe(less())
+        .pipe(concat('dashboard.min.css'))
+        .pipe(minifyCss())
         .pipe(gulp.dest('dist/css'));
 });
 
@@ -104,5 +121,5 @@ gulp.task('livereload', function() {
 /**
  * Gulp tasks
  */
-gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
+gulp.task('build', ['usemin','index', 'build-assets', 'build-custom']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);

@@ -10,7 +10,7 @@ angular.module('AbhiSampleProject').service('sampleService', function($q, $http)
 					"content-type": "application/json"
 				},
 				data: {
-					"text": "Hi+Jundai"
+					"text": "Hi+Abhinav"
 				}
 			}
 			$http(req).then(function(data) {
